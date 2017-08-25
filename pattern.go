@@ -14,6 +14,10 @@ func Match(value string, params ...string) bool {
 }
 
 func patternMatches(value, match string) bool {
+	if match == ">" {
+		return true
+	}
+
 	if !strings.Contains(match, "*") {
 		return false
 	}
